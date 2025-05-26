@@ -1,0 +1,279 @@
+
+[
+  {
+    "name": "MERCURY",
+    "image": "assets/images/mars.jpg",
+    "icPlanet": "assets/images/icon_detail_planet.png",
+    "initial": "The Swift Planet",
+    "description": "Mercury is the closest planet to the Sun and the smallest planet in the Solar System. It is a rocky planet with a thin atmosphere, and it has extreme temperature variations between day and night.",
+    "object3d": "assets/3d_object/mercury.glb",
+    "rotationPeriod": "58.6 Earth Days",
+    "orbitalPeriod": "87.97 Earth Days",
+    "diameter": "3,032 miles | 4,880 km",
+    "type": "Terrestrial",
+    "photos": [
+      "https://unsplash.com/photos/cluster-of-star-illustration-f7YQo-eYHdM",
+      "https://unsplash.com/photos/photography-of-astronaut-beside-satellite-OLlj17tUZnU",
+      "https://unsplash.com/photos/white-and-black-jet-plane-in-mid-air-under-blue-sky-during-daytime-dmhv60RLmlw"
+    ],
+    "stories": [
+      {
+        "SceStation": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "imgSpaceStation": "assets/image/astronauts/imgSpaceStation.jpg",
+        "date" : "December 24, 2023",
+        "title": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "image": "assets/image/planets/news/news_img.jpg",
+        "detail": "NASA’s James Webb Space Telescope has captured new details of the auroras on our solar system’s largest planet. The dancing lights observed on Jupiter are hundreds of times brighter than those seen on Earth. With Webb’s advanced sensitivity, astronomers have studied the phenomena to better understand Jupiter’s magnetosphere."
+      },
+      {
+        "title": "NASA Study Reveals Venus Crust Surprise",
+        "image": "assets/image/planets/news/venus_news.webp",
+        "detail": "Scientists expected the outermost layer of Venus’ crust would grow thicker and thicker over time given its apparent lack of forces that would drive the crust back into the planet’s interior. But the paper, published in Nature Communications, proposes a crust metamorphism process based on rock density and melting cycles."
+      },
+      {
+        "title": "What NASA Is Learning from the Biggest Geomagnetic Storm in 20 Years",
+        "image": "assets/image/planets/news/storm_news.jpg",
+        "detail": "The inaugural Space Weather Tabletop Exercise was supposed to be a training event, where experts could work through the real-time ramifications of a geomagnetic storm, a global disruption to Earth’s magnetic field. Driven by solar eruptions, geomagnetic storms can decimate satellites, overload electrical grids, and expose astronauts to dangerous radiation. Minimizing the impacts of such storms requires close coordination, and this meeting was their chance to practice."
+      }
+    ]
+  },
+  {
+    "name": "VENUS",
+    "image": "assets/images/mars.jpg",
+    "icPlanet": "assets/images/icon_detail_planet.png",
+    "initial": "Earth's Twin",
+    "description": "Venus is the second planet from the Sun and is similar in size and composition to Earth. It has a thick atmosphere composed mainly of carbon dioxide, with clouds of sulfuric acid, making it the hottest planet in the Solar System.",
+    "object3d": "assets/3d_object/venus.glb",
+    "rotationPeriod": "243 Earth Days (Retrograde)",
+    "orbitalPeriod": "224.7 Earth Days",
+    "diameter": "7,521 miles | 12,104 km",
+    "type": "Terrestrial",
+    "photos": [
+      "assets/images/venus1.jpg",
+      "assets/images/venus2.jpg",
+      "assets/images/venus3.jpg"
+    ],
+    "stories": [
+      {
+        "title": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "image": "assets/image/planets/news/news_img.jpg",
+        "detail": "NASA’s James Webb Space Telescope has captured new details of the auroras on our solar system’s largest planet. The dancing lights observed on Jupiter are hundreds of times brighter than those seen on Earth. With Webb’s advanced sensitivity, astronomers have studied the phenomena to better understand Jupiter’s magnetosphere."
+      },
+      {
+        "title": "NASA Study Reveals Venus Crust Surprise",
+        "image": "assets/image/planets/news/venus_news.webp",
+        "detail": "Scientists expected the outermost layer of Venus’ crust would grow thicker and thicker over time given its apparent lack of forces that would drive the crust back into the planet’s interior. But the paper, published in Nature Communications, proposes a crust metamorphism process based on rock density and melting cycles."
+      },
+      {
+        "title": "What NASA Is Learning from the Biggest Geomagnetic Storm in 20 Years",
+        "image": "assets/image/planets/news/storm_news.jpg",
+        "detail": "The inaugural Space Weather Tabletop Exercise was supposed to be a training event, where experts could work through the real-time ramifications of a geomagnetic storm, a global disruption to Earth’s magnetic field. Driven by solar eruptions, geomagnetic storms can decimate satellites, overload electrical grids, and expose astronauts to dangerous radiation. Minimizing the impacts of such storms requires close coordination, and this meeting was their chance to practice."
+      }
+    ]
+  },
+  {
+    "name": "EARTH",
+    "image": "assets/images/mars.jpg",
+    "icPlanet": "assets/images/icon_detail_planet.png",
+    "initial": "The Blue Planet",
+    "description": "Earth is the third planet from the Sun and the only known planet to support life. It has a diverse range of environments, including oceans, mountains, and forests, and a protective atmosphere that allows for a stable climate.",
+    "object3d": "assets/3d_object/earth.glb",
+    "rotationPeriod": "23.9 Hours",
+    "orbitalPeriod": "365.25 Days",
+    "diameter": "7,926 miles | 12,756 km",
+    "type": "Terrestrial",
+    "photos": [
+      "assets/images/earth1.jpg",
+      "assets/images/earth2.jpg",
+      "assets/images/earth3.jpg"
+    ],
+    "stories": [
+      {
+        "title": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "image": "assets/image/planets/news/news_img.jpg",
+        "detail": "NASA’s James Webb Space Telescope has captured new details of the auroras on our solar system’s largest planet. The dancing lights observed on Jupiter are hundreds of times brighter than those seen on Earth. With Webb’s advanced sensitivity, astronomers have studied the phenomena to better understand Jupiter’s magnetosphere."
+      },
+      {
+        "title": "NASA Study Reveals Venus Crust Surprise",
+        "image": "assets/image/planets/news/venus_news.webp",
+        "detail": "Scientists expected the outermost layer of Venus’ crust would grow thicker and thicker over time given its apparent lack of forces that would drive the crust back into the planet’s interior. But the paper, published in Nature Communications, proposes a crust metamorphism process based on rock density and melting cycles."
+      },
+      {
+        "title": "What NASA Is Learning from the Biggest Geomagnetic Storm in 20 Years",
+        "image": "assets/image/planets/news/storm_news.jpg",
+        "detail": "The inaugural Space Weather Tabletop Exercise was supposed to be a training event, where experts could work through the real-time ramifications of a geomagnetic storm, a global disruption to Earth’s magnetic field. Driven by solar eruptions, geomagnetic storms can decimate satellites, overload electrical grids, and expose astronauts to dangerous radiation. Minimizing the impacts of such storms requires close coordination, and this meeting was their chance to practice."
+      }
+    ]
+  },
+  {
+    "name": "MARS",
+    "image": "assets/images/mars.jpg",
+    "icPlanet": "assets/images/icon_detail_planet.png",
+    "initial": "The Red Planet",
+    "description": "Mars is the fourth planet from the Sun and is known for its reddish appearance due to iron oxide on its surface. It has the largest volcano and canyon in the Solar System and has been a target for exploration due to its potential for past life.",
+    "object3d": "assets/3d_object/mars.glb",
+    "rotationPeriod": "24.6 Hours",
+    "orbitalPeriod": "687 Earth Days",
+    "diameter": "2,106 miles | 3,390 Km",
+    "type": "Terrestrial",
+    "photos": [
+      "assets/images/mars1.jpg",
+      "assets/images/mars2.jpg",
+      "assets/images/mars3.jpg"
+    ],
+    "stories": [
+      {
+        "title": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "image": "assets/image/planets/news/news_img.jpg",
+        "detail": "NASA’s James Webb Space Telescope has captured new details of the auroras on our solar system’s largest planet. The dancing lights observed on Jupiter are hundreds of times brighter than those seen on Earth. With Webb’s advanced sensitivity, astronomers have studied the phenomena to better understand Jupiter’s magnetosphere."
+      },
+      {
+        "title": "NASA Study Reveals Venus Crust Surprise",
+        "image": "assets/image/planets/news/venus_news.webp",
+        "detail": "Scientists expected the outermost layer of Venus’ crust would grow thicker and thicker over time given its apparent lack of forces that would drive the crust back into the planet’s interior. But the paper, published in Nature Communications, proposes a crust metamorphism process based on rock density and melting cycles."
+      },
+      {
+        "title": "What NASA Is Learning from the Biggest Geomagnetic Storm in 20 Years",
+        "image": "assets/image/planets/news/storm_news.jpg",
+        "detail": "The inaugural Space Weather Tabletop Exercise was supposed to be a training event, where experts could work through the real-time ramifications of a geomagnetic storm, a global disruption to Earth’s magnetic field. Driven by solar eruptions, geomagnetic storms can decimate satellites, overload electrical grids, and expose astronauts to dangerous radiation. Minimizing the impacts of such storms requires close coordination, and this meeting was their chance to practice."
+      }
+    ]
+  },
+  {
+    "name": "JUPITER",
+    "image": "assets/images/mars.jpg",
+    "icPlanet": "assets/images/icon_detail_planet.png",
+    "initial": "The Gas Giant",
+    "description": "Jupiter is the largest planet in the Solar System and is known for its Great Red Spot, a giant storm. It has a thick atmosphere composed mainly of hydrogen and helium, and it has a strong magnetic field and many moons.",
+    "object3d": "assets/3d_object/jupiter.glb",
+    "rotationPeriod": "9.9 Hours",
+    "orbitalPeriod": "11.86 Earth Years",
+    "diameter": "88,846 miles | 142,984 km",
+    "type": "Gas Giant",
+    "photos": [
+      "assets/images/jupiter1.jpg",
+      "assets/images/jupiter2.jpg",
+      "assets/images/jupiter3.jpg"
+    ],
+    "stories": [
+      {
+        "title": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "image": "assets/image/planets/news/news_img.jpg",
+        "detail": "NASA’s James Webb Space Telescope has captured new details of the auroras on our solar system’s largest planet. The dancing lights observed on Jupiter are hundreds of times brighter than those seen on Earth. With Webb’s advanced sensitivity, astronomers have studied the phenomena to better understand Jupiter’s magnetosphere."
+      },
+      {
+        "title": "NASA Study Reveals Venus Crust Surprise",
+        "image": "assets/image/planets/news/venus_news.webp",
+        "detail": "Scientists expected the outermost layer of Venus’ crust would grow thicker and thicker over time given its apparent lack of forces that would drive the crust back into the planet’s interior. But the paper, published in Nature Communications, proposes a crust metamorphism process based on rock density and melting cycles."
+      },
+      {
+        "title": "What NASA Is Learning from the Biggest Geomagnetic Storm in 20 Years",
+        "image": "assets/image/planets/news/storm_news.jpg",
+        "detail": "The inaugural Space Weather Tabletop Exercise was supposed to be a training event, where experts could work through the real-time ramifications of a geomagnetic storm, a global disruption to Earth’s magnetic field. Driven by solar eruptions, geomagnetic storms can decimate satellites, overload electrical grids, and expose astronauts to dangerous radiation. Minimizing the impacts of such storms requires close coordination, and this meeting was their chance to practice."
+      }
+    ]
+  },
+  {
+    "name": "SATURN",
+    "image": "assets/images/mars.jpg",
+    "icPlanet": "assets/images/icon_detail_planet.png",
+    "initial": "The Ringed Planet",
+    "description": "Saturn is the second-largest planet in the Solar System and is known for its stunning rings made of ice and rock particles. It has a thick atmosphere composed mainly of hydrogen and helium, and it has many moons, including Titan, which has a dense atmosphere.",
+    "object3d": "assets/3d_object/saturn.glb",
+    "rotationPeriod": "10.7 Hours",
+    "orbitalPeriod": "29.45 Earth Years",
+    "diameter": "74,900 miles | 120,536 km",
+    "type": "Gas Giant",
+    "photos": [
+      "assets/images/saturn1.jpg",
+      "assets/images/saturn2.jpg",
+      "assets/images/saturn3.jpg"
+    ],
+   "stories": [
+      {
+        "title": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "image": "assets/image/planets/news/news_img.jpg",
+        "detail": "NASA’s James Webb Space Telescope has captured new details of the auroras on our solar system’s largest planet. The dancing lights observed on Jupiter are hundreds of times brighter than those seen on Earth. With Webb’s advanced sensitivity, astronomers have studied the phenomena to better understand Jupiter’s magnetosphere."
+      },
+      {
+        "title": "NASA Study Reveals Venus Crust Surprise",
+        "image": "assets/image/planets/news/venus_news.webp",
+        "detail": "Scientists expected the outermost layer of Venus’ crust would grow thicker and thicker over time given its apparent lack of forces that would drive the crust back into the planet’s interior. But the paper, published in Nature Communications, proposes a crust metamorphism process based on rock density and melting cycles."
+      },
+      {
+        "title": "What NASA Is Learning from the Biggest Geomagnetic Storm in 20 Years",
+        "image": "assets/image/planets/news/storm_news.jpg",
+        "detail": "The inaugural Space Weather Tabletop Exercise was supposed to be a training event, where experts could work through the real-time ramifications of a geomagnetic storm, a global disruption to Earth’s magnetic field. Driven by solar eruptions, geomagnetic storms can decimate satellites, overload electrical grids, and expose astronauts to dangerous radiation. Minimizing the impacts of such storms requires close coordination, and this meeting was their chance to practice."
+      }
+    ]
+  },
+  {
+    "name": "URANUS",
+    "image": "assets/images/mars.jpg",
+    "icPlanet": "assets/images/icon_detail_planet.png",
+    "initial": "The Ice Giant",
+    "description": "Uranus is the seventh planet from the Sun and is known for its blue-green color due to methane in its atmosphere. It has a unique tilt, causing extreme seasons, and it has a faint ring system and many moons.",
+    "object3d": "assets/3d_object/uranus.glb",
+    "rotationPeriod": "17.24 Hours",
+    "orbitalPeriod": "84 Earth Years",
+    "diameter": "31,518 miles | 50,724 km",
+    "type": "Ice Giant",
+    "photos": [
+      "assets/images/uranus1.jpg",
+      "assets/images/uranus2.jpg",
+      "assets/images/uranus3.jpg"
+    ],
+    "stories": [
+      {
+        "SpaceStation": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "title": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "image": "assets/image/planets/news/news_img.jpg",
+        "detail": "NASA’s James Webb Space Telescope has captured new details of the auroras on our solar system’s largest planet. The dancing lights observed on Jupiter are hundreds of times brighter than those seen on Earth. With Webb’s advanced sensitivity, astronomers have studied the phenomena to better understand Jupiter’s magnetosphere."
+      },
+      {
+        "title": "NASA Study Reveals Venus Crust Surprise",
+        "image": "assets/image/planets/news/venus_news.webp",
+        "detail": "Scientists expected the outermost layer of Venus’ crust would grow thicker and thicker over time given its apparent lack of forces that would drive the crust back into the planet’s interior. But the paper, published in Nature Communications, proposes a crust metamorphism process based on rock density and melting cycles."
+      },
+      {
+        "title": "What NASA Is Learning from the Biggest Geomagnetic Storm in 20 Years",
+        "image": "assets/image/planets/news/storm_news.jpg",
+        "detail": "The inaugural Space Weather Tabletop Exercise was supposed to be a training event, where experts could work through the real-time ramifications of a geomagnetic storm, a global disruption to Earth’s magnetic field. Driven by solar eruptions, geomagnetic storms can decimate satellites, overload electrical grids, and expose astronauts to dangerous radiation. Minimizing the impacts of such storms requires close coordination, and this meeting was their chance to practice."
+      }
+    ]
+  },
+  {
+    "name": "NEPTUNE",
+    "image": "assets/images/mars.jpg",
+    "icPlanet": "assets/images/icon_detail_planet.png",
+    "initial": "The Windy Planet",
+    "description": "Neptune is the eighth and farthest planet from the Sun. It is known for its deep blue color and strong winds, which are the fastest in the Solar System. It has a thick atmosphere composed mainly of hydrogen, helium, and methane, and it has a faint ring system and many moons.",
+    "object3d": "assets/3d_object/neptune.glb",
+    "rotationPeriod": "16.11 Hours",
+    "orbitalPeriod": "164.8 Earth Years",
+    "diameter": "30,775 miles | 49,528 km",
+    "type": "Ice Giant",
+    "photos": [
+      "assets/images/neptune1.jpg",
+      "assets/images/neptune2.jpg",
+      "assets/images/neptune3.jpg"
+    ],
+    "stories": [
+      {
+        "title": "NASA’s Webb Reveals New Details, Mysteries in Jupiter’s Aurora",
+        "image": "assets/image/planets/news/news_img.jpg",
+        "detail": "NASA’s James Webb Space Telescope has captured new details of the auroras on our solar system’s largest planet. The dancing lights observed on Jupiter are hundreds of times brighter than those seen on Earth. With Webb’s advanced sensitivity, astronomers have studied the phenomena to better understand Jupiter’s magnetosphere."
+      },
+      {
+        "title": "NASA Study Reveals Venus Crust Surprise",
+        "image": "assets/image/planets/news/venus_news.webp",
+        "detail": "Scientists expected the outermost layer of Venus’ crust would grow thicker and thicker over time given its apparent lack of forces that would drive the crust back into the planet’s interior. But the paper, published in Nature Communications, proposes a crust metamorphism process based on rock density and melting cycles."
+      },
+      {
+        "title": "What NASA Is Learning from the Biggest Geomagnetic Storm in 20 Years",
+        "image": "assets/image/planets/news/storm_news.jpg",
+        "detail": "The inaugural Space Weather Tabletop Exercise was supposed to be a training event, where experts could work through the real-time ramifications of a geomagnetic storm, a global disruption to Earth’s magnetic field. Driven by solar eruptions, geomagnetic storms can decimate satellites, overload electrical grids, and expose astronauts to dangerous radiation. Minimizing the impacts of such storms requires close coordination, and this meeting was their chance to practice."
+      }
+    ]
+  }
+]
