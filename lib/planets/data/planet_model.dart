@@ -1,4 +1,5 @@
 import 'planet_story_model.dart';
+import '../../utils/json_utils.dart';
 
 class PlanetModel {
   final String name;
@@ -18,9 +19,9 @@ class PlanetModel {
     required this.name,
     required this.image,
     required this.icPlanet,
-    required this.object3d,
     required this.initial,
     required this.description,
+    required this.object3d,
     required this.rotationPeriod,
     required this.orbitalPeriod,
     required this.diameter,
@@ -31,21 +32,20 @@ class PlanetModel {
 
   factory PlanetModel.fromJson(Map<String, dynamic> json) {
     return PlanetModel(
-      name: json['name'],
-      image: json['image'],
-      icPlanet: json['icPlanet'],
-      initial: json['initial'],
-      description: json['description'],
-      object3d: json['object3d'],
-      rotationPeriod: json['rotationPeriod'],
-      orbitalPeriod: json['orbitalPeriod'],
-      diameter: json['diameter'],
-      type: json['type'],
-      photos: List<String>.from(json['photos']),
-      stories:
-          (json['stories'] as List)
-              .map((e) => PlanetStoryModel.fromJson(e))
-              .toList(),
+      name: safeString(json['name']),
+      image: safeString(json['image']),
+      icPlanet: safeString(json['icPlanet']),
+      initial: safeString(json['initial']),
+      description: safeString(json['description']),
+      object3d: safeString(json['object3d']),
+      rotationPeriod: safeString(json['rotationPeriod']),
+      orbitalPeriod: safeString(json['orbitalPeriod']),
+      diameter: safeString(json['diameter']),
+      type: safeString(json['type']),
+      photos: safeStringList(json['photos']),
+      stories: (json['stories'] as List<dynamic>? ?? [])
+          .map((e) => PlanetStoryModel.fromJson(e))
+          .toList(),
     );
   }
 }

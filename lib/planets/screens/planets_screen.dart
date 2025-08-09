@@ -10,10 +10,9 @@ class PlanetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create:
-          (context) =>
-              PlanetBloc(PlanetRepository(planetService: PlanetService()))
-                ..add(LoadPlanetsEvent()),
+      create: (context) => PlanetBloc(
+        PlanetRepository(planetService: PlanetService()),
+      )..add(LoadPlanetsEvent()), // Trigger load planets event
       child: PlanetPage(),
     );
   }

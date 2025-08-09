@@ -1,3 +1,5 @@
+import '../../utils/json_utils.dart';
+
 class PlanetStoryModel {
   final String title;
   final String image;
@@ -5,6 +7,7 @@ class PlanetStoryModel {
   final String date;
   final String? spaceStation;
   final String? imgSpaceStation;
+
   PlanetStoryModel({
     required this.title,
     required this.image,
@@ -16,12 +19,12 @@ class PlanetStoryModel {
 
   factory PlanetStoryModel.fromJson(Map<String, dynamic> json) {
     return PlanetStoryModel(
-      spaceStation: json['spaceStation'] ?? "",
-      imgSpaceStation: json['imgSpaceStation'] ?? "",
-      date: json['date'],
-      title: json['title'],
-      image: json['image'],
-      detail: json['detail'],
+      spaceStation: safeString(json['spaceStation']),
+      imgSpaceStation: safeString(json['imgSpaceStation']),
+      date: safeString(json['date']),
+      title: safeString(json['title']),
+      image: safeString(json['image']),
+      detail: safeString(json['detail']),
     );
   }
 }

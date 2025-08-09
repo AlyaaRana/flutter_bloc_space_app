@@ -6,7 +6,7 @@ import 'planet_model.dart';
 class PlanetService {
   Future<List<PlanetModel>> loadPlanets() async {
     String jsonString = await rootBundle.loadString(
-      'assets/planets/data/planets.json',
+      'assets/data/planets.json',
     );
 
     List<dynamic> jsonResponse = jsonDecode(jsonString);

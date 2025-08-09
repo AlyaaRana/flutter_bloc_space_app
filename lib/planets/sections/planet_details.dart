@@ -35,80 +35,86 @@ class PlanetDetails extends StatelessWidget {
     return Container(
       height: size.height * 0.6,
       width: double.infinity,
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.symmetric(horizontal: 16,vertical : 20),
       decoration: const BoxDecoration(
         color: AppColors.background,
         borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                children: [
-                  Text(planetName, style: AppTextStyles.titlePlanet),
-                  SizedBox(height: 10),
-                  Text(initialPlanet, style: AppTextStyles.titlePlanet),
-                ],
-              ),
-              Image.asset(icPlanet),
-            ],
-          ),
-          const SizedBox(height: 20),
-          GridView.count(
-            crossAxisCount: 2,
-            mainAxisSpacing: 15,
-            crossAxisSpacing: 15,
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            children: [
-              infoBox(AppIcons.rotationPeriod, rotationPeriod),
-              infoBox(AppIcons.orbitalPeriod, distance),
-              infoBox(AppIcons.planetType, type),
-              infoBox(AppIcons.diameter, diameter),
-            ],
-          ),
-          const SizedBox(height: 20),
-          Text(description, style: AppTextStyles.descPlanet),
-          const SizedBox(height: 20),
-          Text("Related Images", style: AppTextStyles.h3),
-          const SizedBox(height: 15),
-          CarouselSlider(
-            items:
-                photos
-                    .map(
-                      (photo) => Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 15),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          image: DecorationImage(
-                            image: AssetImage(photo),
-                            fit: BoxFit.cover,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(planetName, style: AppTextStyles.titlePlanet),
+                    SizedBox(height: 2),
+                    Text(initialPlanet, style: AppTextStyles.titlePlanet),
+                  ],
+                ),
+                Image.asset(icPlanet),
+              ],
+            ),
+            const SizedBox(height: 15),
+            GridView.count(
+              crossAxisCount: size.width > 400 ? 2 : 1,
+              shrinkWrap: true,
+              padding: EdgeInsets.zero,
+              physics: const NeverScrollableScrollPhysics(),
+              crossAxisSpacing: 6,
+              mainAxisSpacing: 2,
+              childAspectRatio: 5,
+              children: [
+                infoBox(AppIcons.rotationPeriod, rotationPeriod),
+                infoBox(AppIcons.orbitalPeriod, distance),
+                infoBox(AppIcons.planetType, type),
+                infoBox(AppIcons.diameter, diameter),
+              ],
+            ),
+            const SizedBox(height: 15),
+            Text(description, style: AppTextStyles.descPlanet,                textAlign: TextAlign.justify, // biar rapi kiri kanan
+            ),
+            const SizedBox(height: 20),
+            Text("Related Images", style: AppTextStyles.h3),
+            const SizedBox(height: 15),
+            CarouselSlider(
+              items:
+                  photos
+                      .map(
+                        (photo) => Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 15),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            image: DecorationImage(
+                              image: AssetImage(photo),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
-                      ),
-                    )
-                    .toList(),
-            options: CarouselOptions(
-              // Set the desired options for the carousel
-              height: 194,
-              // Set the height of the carousel
-              autoPlay: true, // Enable auto-play
-              autoPlayCurve: Curves.easeInOut, // Set the auto-play curve
-              autoPlayAnimationDuration: Duration(
-                milliseconds: 500,
-              ), // Set the auto-play animation duration
-              aspectRatio: 16 / 9, // Set the aspect ratio of each item
-              viewportFraction: 0.8, // Set the viewport fraction for each item
-              initialPage: 0, // Set the initial page index
-              enlargeStrategy:
-                  CenterPageEnlargeStrategy
-                      .height, // Perbesar berdasarkan tinggi
+                      )
+                      .toList(),
+              options: CarouselOptions(
+                // Set the desired options for the carousel
+                height: 194,
+                // Set the height of the carousel
+                autoPlay: true, // Enable auto-play
+                autoPlayCurve: Curves.easeInOut, // Set the auto-play curve
+                autoPlayAnimationDuration: Duration(
+                  milliseconds: 500,
+                ), // Set the auto-play animation duration
+                aspectRatio: 16 / 9, // Set the aspect ratio of each item
+                viewportFraction: 0.8, // Set the viewport fraction for each item
+                initialPage: 0, // Set the initial page index
+                enlargeStrategy:
+                    CenterPageEnlargeStrategy
+                        .height, // Perbesar berdasarkan tinggi
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -116,7 +122,7 @@ class PlanetDetails extends StatelessWidget {
   Widget infoBox(String iconPath, String label) {
     return Row(
       children: [
-        SvgPicture.asset(iconPath),
+        Image.asset(iconPath),
         const SizedBox(width: 10),
         Text(label, style: AppTextStyles.infoPlanet),
       ],

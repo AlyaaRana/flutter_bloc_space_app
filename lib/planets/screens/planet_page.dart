@@ -8,21 +8,35 @@ import '../sections/header_explore.dart';
 import '../sections/stories_section.dart';
 
 class PlanetPage extends StatelessWidget {
-  const PlanetPage({super.key});
+  final PlanetModel? selectedPlanet;
+
+  const PlanetPage({super.key, this.selectedPlanet});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: BlocBuilder<PlanetBloc, PlanetState>(
         builder: (context, state) {
+          // Initialize bloc when widget is built
+          if (state is PlanetInitial) {
+            if (selectedPlanet != null) {
+              context.read<PlanetBloc>().add(LoadPlanetsWithSelectedEvent(selectedPlanet!));
+            } else {
+              context.read<PlanetBloc>().add(LoadPlanetsEvent());
+            }
+            return Center(child: CircularProgressIndicator());
+          }
+
           if (state is PlanetsLoadingState) {
             return Center(child: CircularProgressIndicator());
           } else if (state is PlanetsLoadedState) {
-            final planet = state.planets.first;
-
             return SafeArea(
               child: Column(
-                children: [HeaderExplore(planet: planet), StoriesSection()],
+                children: [
+                  HeaderExplore(),
+                  StoriesSection()
+                ],
               ),
             );
           } else if (state is PlanetsErrorState) {

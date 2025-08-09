@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
         if (state is PlanetsLoadingState) {
           return _buildLoading();
         } else if (state is PlanetsLoadedState) {
-          return const PlanetSection(planets: []);
+          return PlanetSection(planets: state.planets);
         } else if (state is PlanetsErrorState) {
           return _buildError(state.message);
         }

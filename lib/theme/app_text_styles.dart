@@ -7,6 +7,9 @@ class AppTextStyles {
   static TextStyle get _base =>
       GoogleFonts.poppins(color: Colors.white, letterSpacing: 0);
 
+  static TextStyle get _popup =>
+      GoogleFonts.poppins(color: Colors.black, letterSpacing: 0);
+
   static TextStyle get _header =>
       GoogleFonts.poppins(color: Colors.black, letterSpacing: 0);
 
@@ -21,12 +24,12 @@ class AppTextStyles {
       _header.copyWith(fontSize: 14, fontWeight: FontWeight.w500);
 
   static TextStyle get h3 =>
-      _base.copyWith(fontSize: 14, fontWeight: FontWeight.w600);
+      _base.copyWith(fontSize: 20, fontWeight: FontWeight.w700);
   static TextStyle get more =>
       _base.copyWith(fontSize: 12, fontWeight: FontWeight.w500, height: 1.4);
   //Planet
   static TextStyle get titlePlanetHeader => _base.copyWith(
-    fontSize: 12,
+    fontSize: 17,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.5,
   );
@@ -42,7 +45,7 @@ class AppTextStyles {
   );
 
   static TextStyle get subTitlePlanet => _base.copyWith(
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: FontWeight.w600,
     letterSpacing: -0.5,
   );
@@ -87,14 +90,14 @@ class AppTextStyles {
       _base.copyWith(fontSize: 14, fontWeight: FontWeight.w600);
   //3D
   static TextStyle get title3DPopUp =>
-      _base.copyWith(fontSize: 20, fontWeight: FontWeight.w600);
-  static TextStyle get desc3DPopUp => _base.copyWith(
+      _popup.copyWith(fontSize: 20, fontWeight: FontWeight.w600);
+  static TextStyle get desc3DPopUp => _popup.copyWith(
     fontSize: 13,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.5,
   );
   static TextStyle get buttonPopUp =>
-      _base.copyWith(fontSize: 16, fontWeight: FontWeight.w600);
+      _popup.copyWith(fontSize: 16, fontWeight: FontWeight.w600);
   //News
   static TextStyle get titleNews => _base.copyWith(
     fontSize: 18,

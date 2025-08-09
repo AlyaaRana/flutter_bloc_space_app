@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:spacenea/theme/app_icons.dart';
-import 'package:spacenea/theme/app_text_styles.dart';
-
-import '../../widgets/detail_app_bar.dart';
+import 'package:flutter_svg/svg.dart';
+import '../../theme/app_icons.dart';
+import '../../theme/app_text_styles.dart';
+import '../widgets/3d_object_popup.dart';
+import 'planet_detail_page.dart';
 import '../data/planet_model.dart';
-import '../../theme/app_colors.dart';
-import '../../theme/app_images.dart';
-import '../sections/planet_details.dart';
-import '../sections/planet_header.dart';
 
 class DetailPlanetScreen extends StatelessWidget {
   final PlanetModel planet;
@@ -17,54 +13,59 @@ class DetailPlanetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: DetailAppBar(
-        title: planet.name,
-        titleStyle: AppTextStyles.titleDetailPlanet,
-        actions: [_buildCircularIcon(AppIcons.vid3d)],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            PlanetHeader(imageAsset: planet.image),
-            PlanetDetails(
-              planetName: planet.name,
-              description: planet.description,
-              rotationPeriod: planet.rotationPeriod,
-              distance: planet.orbitalPeriod,
-              diameter: planet.diameter,
-              type: planet.type,
-              initialPlanet: planet.initial,
-              icPlanet: planet.icPlanet,
-              photos: planet.photos,
-            ),
-          ],
+    return PlanetDetailsPage(
+      title: planet.name,
+      titleStyle: AppTextStyles.titleDetailPlanet,
+      imageAsset: planet.image,
+      planet: planet,
+      actions: [_buildCircularIcon(context, AppIcons.vid3d)],
+    );
+  }
+
+  Widget _buildCircularIcon(BuildContext context, String assetPath) {
+    return GestureDetector(
+      onTap: () {
+        showGeneralDialog(
+          context: context,
+          barrierDismissible: true,
+          barrierLabel: '',
+          transitionDuration: const Duration(milliseconds: 300),
+          pageBuilder: (context, anim1, anim2) {
+            return SafeArea(
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 60, left: 20, right: 20),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: IntrinsicHeight(
+                      child: PopUpObject3d(),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
+          transitionBuilder: (context, anim1, anim2, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, -1),
+                end: Offset.zero,
+              ).animate(anim1),
+              child: child,
+            );
+          },
+        );
+      },
+      child: Container(
+        width: 40,
+        height: 40,
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.white,
         ),
+        child: Center(child: SvgPicture.asset(assetPath)),
       ),
-    );
-  }
-
-  Widget _buildCircularIcon(String assetPath) {
-    return Container(
-      width: 40,
-      height: 40,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.white,
-      ),
-      child: Center(child: SvgPicture.asset(assetPath)),
-    );
-  }
-
-  Widget infoBox(Icon, String label) {
-    return Row(
-      children: [
-        SvgPicture(Icon),
-        const SizedBox(width: 10),
-        Text(label, style: AppTextStyles.infoPlanet),
-      ],
     );
   }
 }

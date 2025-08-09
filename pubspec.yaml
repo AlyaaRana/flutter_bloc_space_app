@@ -39,10 +39,11 @@ dependencies:
   path_provider_windows:
   carousel_slider: ^5.0.0
   flutter_svg: ^2.0.7
-  flutter_staggered_grid_view: ^0.6.2
+  flutter_staggered_grid_view:
   model_viewer_plus: ^1.8.0
   dio: ^5.8.0+1
-  
+
+
 
 dev_dependencies:
   flutter_test:
