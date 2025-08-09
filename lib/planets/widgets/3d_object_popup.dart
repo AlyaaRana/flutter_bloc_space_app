@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_text_styles.dart';
+import '../data/planet_model.dart';
+import '../screens/3d_planet.dart';
 
 class PopUpObject3d extends StatelessWidget {
-  const PopUpObject3d({super.key});
+  final PlanetModel planet;
+
+  const PopUpObject3d({
+    super.key,
+    required this.planet,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +21,7 @@ class PopUpObject3d extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Column(
-        mainAxisSize: MainAxisSize.min, // biar gak full height
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('Show object in 3D', style: AppTextStyles.title3DPopUp),
@@ -26,15 +33,23 @@ class PopUpObject3d extends StatelessWidget {
           const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               GestureDetector(
                 onTap: () => Navigator.of(context).pop(),
                 child: Text('Close', style: AppTextStyles.buttonPopUp),
               ),
-              SizedBox(width: 10,),
+              const SizedBox(width: 10),
               GestureDetector(
                 onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => PlanetObject3d(
+                        object3dPath: planet.object3d,
+                        planetName: planet.name,
+                      ),
+                    ),
+                  );
                 },
                 child: Text('Open', style: AppTextStyles.buttonPopUp),
               ),

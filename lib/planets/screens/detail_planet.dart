@@ -39,7 +39,7 @@ class DetailPlanetScreen extends StatelessWidget {
                   child: Material(
                     color: Colors.transparent,
                     child: IntrinsicHeight(
-                      child: PopUpObject3d(),
+                      child: PopUpObject3d(planet: planet),
                     ),
                   ),
                 ),

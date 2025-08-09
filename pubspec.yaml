@@ -65,6 +65,7 @@ flutter:
   assets:
     - assets/image/
     - assets/icon/
+    - assets/3d_object/
     - assets/data/planets.json
 
   # The following line ensures that the Material Icons font is
